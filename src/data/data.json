@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "titulo": "Notebook Dell oficina",
+    "descripcion": "intel core i5, 16gb ram ddr4, ssd 512gb m2, pantalla 15.5",
+    "marca": "Dell",
+    "precio": 250000.0,
+    "imagen": "https://th.bing.com/th/id/R.d25b1a49a9fafbf23a6373e0c47e45ff?rik=VbUNfUCprHYtyQ&riu=http%3a%2f%2fi.mlcdn.com.br%2f1500x1500%2fnotebook-dell-inspiron-3000-i15-3542-a30c-intel-core-i5-4gb-1tb-windows-8.1-led-15-6-hdmi-135223000.jpg&ehk=oKyjUP30L6M9X%2bUwsnsmIsQhRMgmHNK42Q%2fP0c0of58%3d&risl=&pid=ImgRaw&r=0",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "titulo": "Notebook Lenovo gamer",
+    "descripcion": "AMD Ryzen 7, 8GB RAM, 512GB SSD, pantalla 14",
+    "marca": "Lenovo",
+    "precio": 180000.0,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_670935-MLA51988776838_102022-O.webp",
+    "stock": 10
+  },
+  {
+    "id": 3,
+    "titulo": "Notebook HP básica",
+    "descripcion": "Intel Core i7, 16GB RAM, 1TB HDD, pantalla 15.6",
+    "marca": "HP",
+    "precio": 210000.0,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_877931-MLA69378170816_052023-O.webp",
+    "stock": 10
+  },
+  {
+    "id": 4,
+    "titulo": "Notebook HP oficina",
+    "descripcion": "AMD rizen 5, 16gb ram ddr4, ssd 512gb m2, pantalla 14",
+    "marca": "HP",
+    "precio": 350000.0,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_929590-MLA52976939498_122022-O.webp",
+    "stock": 10
+  },
+  {
+    "id": 5,
+    "titulo": "Notebook Dell gamer",
+    "descripcion": "intel core i7, 32gb ram ddr4, video 12gb, ssd 1tb m2, pantalla 17",
+    "marca": "Dell",
+    "precio": 800000.0,
+    "imagen": "https://th.bing.com/th/id/R.acbdd69b5caed96b52a37352861fb99b?rik=7Q2TK%2bzXFYGoHw&pid=ImgRaw&r=0",
+    "stock": 10
+  },
+  {
+    "id": 6,
+    "titulo": "Notebook Lenovo básica",
+    "descripcion": "intel core i3, 16gb ram ddr4, ssd 256 m2, pantalla 14",
+    "marca": "Lenovo",
+    "precio": 300000.0,
+    "imagen": "https://th.bing.com/th/id/R.fa2670eadf67a928429c276d5be1d4b7?rik=2IHEEO9s66VzBQ&pid=ImgRaw&r=0",
+    "stock": 10
+  },
+  {
+    "id": 7,
+    "titulo": "Notebook HP gamer",
+    "descripcion": "AMD rizen 7, 32gb ram ddr4, video 8gb, ssd 512gb m2, pantalla 15",
+    "marca": "HP",
+    "precio": 500000.0,
+    "imagen": "https://th.bing.com/th/id/OIP.684NQNblvIajTSKMQtxlWgHaFK?pid=ImgDet&rs=1",
+    "stock": 10
+  },
+  {
+    "id": 8,
+    "titulo": "Notebook Asus gamer",
+    "descripcion": "AMD rizen 7, 32gb ram ddr4, video 12gb, ssd 1tb m2, pantalla 17",
+    "marca": "Asus",
+    "precio": 900000.0,
+    "imagen": "https://th.bing.com/th/id/OIP.-SrTYrvYX2FztybvXAbgWwHaFj?pid=ImgDet&rs=1",
+    "stock": 10
+  },
+  {
+    "id": 9,
+    "titulo": "Notebook Lenovo oficina",
+    "descripcion": "AMD rizen 5, 16gb ram ddr4, ssd 512gb m2, pantalla 14",
+    "marca": "Lenovo",
+    "precio": 350000.0,
+    "imagen": "https://th.bing.com/th/id/R.fa2670eadf67a928429c276d5be1d4b7?rik=2IHEEO9s66VzBQ&pid=ImgRaw&r=0",
+    "stock": 10
+  },
+  {
+    "id": 10,
+    "titulo": "Notebook Asus oficina",
+    "descripcion": "intel core i5, 32gb ram ddr4, ssd 512 m2, pantalla 15",
+    "marca": "Asus",
+    "precio": 450000.0,
+    "imagen": "https://th.bing.com/th/id/R.bf214b856a9c0a6bdd6a8607f13bd7b9?rik=whhJp1uhysp5tg&riu=http%3a%2f%2fwww.bhphotovideo.com%2fimages%2fimages2000x2000%2fasus_1225b_su17_bk_eee_1225b_su17_bk_11_6_netbook_844671.jpg&ehk=RJ0fD8clIQoN2HDMfUZdy%2fRh90jiNeu46lwLNBVJdxU%3d&risl=&pid=ImgRaw&r=0",
+    "stock": 10
+  }
+]
