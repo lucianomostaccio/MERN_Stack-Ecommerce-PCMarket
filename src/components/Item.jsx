@@ -12,7 +12,7 @@ const Item = ({producto}) => {
        <img src={producto.imagen} alt={producto.title} />
        <div>             
            <h4>{producto.titulo}</h4>
-           <p>Precio: ${producto.precio}</p>
+           <p>Precio: ${producto.precio.toLocaleString('es-AR')}</p>
            <p>Marca: {toCapital(producto.marca)}</p>
            <Link className="ver-mas" to={`/item/${producto.id}`}>Ver producto</Link>
         </div>

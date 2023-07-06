@@ -7,11 +7,12 @@ import Carrito from "./components/Carrito";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contacto from "./components/Contacto";
 import '../src/App.css';
+import Footer from "./components/Footer";
 
 function App() {
 
   return (
-    <div>
+    <div id="mainDiv">
       <CartProvider>
         <BrowserRouter>
           <Navbar />
@@ -25,7 +26,7 @@ function App() {
             <Route path="/contacto" element={<Contacto />}/>
           </Routes>
 
-          {/* <Footer/> */}
+          <Footer/>
         </BrowserRouter>
       </CartProvider>
     </div>
