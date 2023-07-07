@@ -53,6 +53,7 @@
 
 #mainDiv {
   background-color: #eee;
+  height: 100vh;
 }
 
 .container {
@@ -276,10 +277,14 @@
   margin-bottom: 5rem;
 }
 
+#cartVacio{
+  margin-bottom: 25rem;
+}
+
 #divItemCart {
   display: flex;
   justify-content: space-between;
-  min-height: 12rem;
+  min-height: 25vh;
   margin-bottom: 1.5rem;
   align-items: center;
   background-color: white;
@@ -375,12 +380,11 @@
 
 /*footer*/
 .sectionfooter {
-  grid-area: footer;
-  position: relative;
   width: 100%;
   background: #172940;
   padding-top: 60px;
 }
+
 footer {
   display: flex;
   align-items: flex-start;
@@ -445,4 +449,89 @@ footer.bottom .links > p {
 
 .legal {
   display: flex;
+}
+
+/*formulario contacto*/
+.formpage {
+  justify-content: center !important;
+}
+
+.formpage .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.formpage form {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: -10px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: rgb(255,255,255);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.formpage form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: rgb(0,0,0);
+}
+
+.formpage form input[type="text"],
+.formpage form input[type="email"],
+#pais {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.formpage form .checks {
+  color: rgb(0,0,0);
+  font-size: small;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.formpage form .checks .checkboxes {
+  font-weight: 450;
+  margin-left: 5px;
+}
+
+.formpage form textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.formpage form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.formpage form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.formpage form input[type="checkbox"] {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
 }
