@@ -1,33 +1,59 @@
 import CartWidget from "./CartWidget";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <nav className="navbar">
-        <Link to="/" className="logo"><h1>PC Market</h1></Link>
-        <ul className="menu">
-            <li><Link className="NavLink" to="/">Inicio</Link></li>
-            {/* <li className="NavLink">Por marca</li> */}
-            <li><Link className="NavLink" to="/productos/Asus">Asus</Link></li>
-            <li><Link className="NavLink" to="/productos/Dell">Dell</Link></li>
-            <li><Link className="NavLink" to="/productos/HP">HP</Link></li>
-            <li><Link className="NavLink" to="/productos/Lenovo">Lenovo</Link></li>
-            <li><Link className="NavLink" to="/Contacto">Contacto</Link></li>
-            {/* <form type="search"
+      <Link to="/" className="logo">
+        <h1>PC Market</h1>
+      </Link>
+      <ul className="menu">
+        <li>
+          <Link className="NavLink" to="/">
+            Inicio
+          </Link>
+        </li>
+        {/* <li className="NavLink">Por marca</li> */}
+        <li>
+          <Link className="NavLink" to="/productos/Asus">
+            Asus
+          </Link>
+        </li>
+        <li>
+          <Link className="NavLink" to="/productos/Dell">
+            Dell
+          </Link>
+        </li>
+        <li>
+          <Link className="NavLink" to="/productos/HP">
+            HP
+          </Link>
+        </li>
+        <li>
+          <Link className="NavLink" to="/productos/Lenovo">
+            Lenovo
+          </Link>
+        </li>
+        <li>
+          <Link className="NavLink" to="/Contacto">
+            Contacto
+          </Link>
+        </li>
+        {/* <form type="search"
               placeholder="Buscar"
               className="me-2"
               aria-label="Search"
               id="busqueda"></form>
             <button type="submit" id="buscarBtn">Buscar</button> */}
-            <li><CartWidget /></li>
-        </ul>
+        <li>
+          <CartWidget />
+        </li>
+      </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
-
-//ok
+export default NavBar;
 
 // function NavBar() {
 //   return (
@@ -64,5 +90,3 @@ export default Navbar
 //     </Navbar>
 //   );
 // }
-
-// export default NavBar;
