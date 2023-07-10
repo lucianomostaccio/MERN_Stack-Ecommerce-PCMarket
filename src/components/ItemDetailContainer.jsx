@@ -13,13 +13,7 @@ const ItemDetailContainer = () => {
     });
   }, [id]);
 
-  return (
-  <div id="itemDetailDiv">
-    {item && <ItemDetail item={item} />}
-  </div>
-  )
+  return <div id="itemDetailDiv">{item && <ItemDetail item={item} />}</div>;
 };
 
 export default ItemDetailContainer;
-
-//ok
