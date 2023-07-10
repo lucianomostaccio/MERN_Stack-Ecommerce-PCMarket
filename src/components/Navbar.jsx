@@ -1,5 +1,13 @@
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import data from "../data/data.json"
+
+const categories = data.map(producto => producto.marca)
+const unique = [...new Set(categories)];
+unique.sort();
+
+
+console.log([...unique]) //desestructuro para convertir en array y que sea iterable
 
 const NavBar = () => {
   return (
@@ -14,12 +22,15 @@ const NavBar = () => {
           </Link>
         </li>
         {/* <li className="NavLink">Por marca</li> */}
-        <li>
-          <Link className="NavLink" to="/productos/Asus">
-            Asus
-          </Link>
-        </li>
-        <li>
+        <ul className="NavCategories">
+          {unique.map(item => (
+            <li> 
+              <Link className="NavLink" to={`/category/${item}`}>
+                {item}
+              </Link>
+            </li>))}
+        </ul>
+        {/* <li>
           <Link className="NavLink" to="/productos/Dell">
             Dell
           </Link>
@@ -33,7 +44,7 @@ const NavBar = () => {
           <Link className="NavLink" to="/productos/Lenovo">
             Lenovo
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link className="NavLink" to="/Contacto">
             Contacto
