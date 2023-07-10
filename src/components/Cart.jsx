@@ -34,7 +34,7 @@ const Cart = () => {
             <button id="vaciarCarrito" onClick={handleVaciar}>
               Vaciar
             </button>
-            <Link to="" id="finalizarCompra">
+            <Link to="/checkout" id="finalizarCompra">
               Finalizar compra
             </Link>
           </div>

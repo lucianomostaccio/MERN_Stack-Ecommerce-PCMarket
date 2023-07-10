@@ -172,7 +172,7 @@
   color: white;
 }
 
-#itemDetailDiv{
+#itemDetailDiv {
   margin-top: 4rem;
   margin-bottom: 9rem;
 }
@@ -185,7 +185,7 @@
   border-radius: 1rem;
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.175)
+  border-color: rgba(0, 0, 0, 0.175);
 }
 
 .producto-detalle img {
@@ -283,7 +283,7 @@
   margin-bottom: 5rem;
 }
 
-#cartVacio{
+#cartVacio {
   margin-bottom: 25rem;
 }
 
@@ -297,7 +297,7 @@
   border-radius: 1rem;
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.175)
+  border-color: rgba(0, 0, 0, 0.175);
 }
 
 #fotoCarrito {
@@ -475,7 +475,7 @@ footer.bottom .links > p {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 15px;
-  background-color: rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
@@ -484,7 +484,7 @@ footer.bottom .links > p {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 }
 
 .formpage form input[type="text"],
@@ -500,7 +500,7 @@ footer.bottom .links > p {
 }
 
 .formpage form .checks {
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
   font-size: small;
   margin-bottom: 0.5rem;
   display: flex;
@@ -540,4 +540,13 @@ footer.bottom .links > p {
   display: flex;
   align-items: center;
   padding-left: 1rem;
+}
+
+.checkout {
+  margin-bottom: 30rem;
+}
+
+.checkout > h1 {
+  text-align: center;
+  vertical-align: middle;
 }
