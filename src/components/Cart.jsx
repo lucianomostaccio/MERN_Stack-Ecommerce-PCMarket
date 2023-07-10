@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
-const Carrito = () => {
+const Cart = () => {
   const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
 
   const handleVaciar = () => {
@@ -46,4 +46,4 @@ const Carrito = () => {
   );
 };
 
-export default Carrito;
+export default Cart;

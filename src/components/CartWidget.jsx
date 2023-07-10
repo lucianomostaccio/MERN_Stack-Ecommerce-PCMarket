@@ -10,7 +10,7 @@ function CartWidget() {
   return (
     <div>
       <li className="carritoNav">
-        <Link span id="cart-icon" to="/Carrito">
+        <Link span id="cart-icon" to="/cart">
           CARRITO
           <FontAwesomeIcon icon={faShoppingCart} />
           <i className="fa-solid" id="cantidadCarrito">
