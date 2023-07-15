@@ -8,17 +8,15 @@ function CartWidget() {
   const { cantidadEnCarrito } = useContext(CartContext);
 
   return (
-    <div>
-      <li className="carritoNav">
-        <Link span id="cart-icon" to="/cart">
-          CARRITO
-          <FontAwesomeIcon icon={faShoppingCart} />
-          <i className="fa-solid" id="cantidadCarrito">
-            {cantidadEnCarrito()}
-          </i>
-        </Link>
-      </li>
-    </div>
+    <li className="carritoNav">
+      <Link span="true" id="cart-icon" to="/cart">
+        CARRITO
+        <FontAwesomeIcon icon={faShoppingCart} />
+        <span span="true" className="fa-solid" id="cantidadCarrito">
+          {cantidadEnCarrito()}
+        </span>
+      </Link>
+    </li>
   );
 }
 

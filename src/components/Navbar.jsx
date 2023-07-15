@@ -1,13 +1,12 @@
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import data from "../data/data.json"
+import data from "../data/data.json";
 
-const categories = data.map(producto => producto.marca)
+const categories = data.map((producto) => producto.marca);
 const unique = [...new Set(categories)];
 unique.sort();
 
-
-console.log([...unique]) //desestructuro para convertir en array y que sea iterable
+// console.log([...unique]); //desestructuro para convertir en array y que sea iterable
 
 const NavBar = () => {
   return (
@@ -22,14 +21,15 @@ const NavBar = () => {
           </Link>
         </li>
         {/* <li className="NavLink">Por marca</li> */}
-        <ul className="NavCategories">
-          {unique.map(item => (
-            <li> 
+        <div className="NavCategories">
+          {unique.map((item, id) => (
+            <li key={id}>
               <Link className="NavLink" to={`/category/${item}`}>
                 {item}
               </Link>
-            </li>))}
-        </ul>
+            </li>
+          ))}
+        </div>
         {/* <li>
           <Link className="NavLink" to="/productos/Dell">
             Dell
@@ -65,39 +65,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-// function NavBar() {
-//   return (
-//     <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
-//       <Container fluid>
-//         <Navbar.Brand href="../public/index.html">PC MARKET</Navbar.Brand>
-//         <Navbar.Toggle aria-controls="navbarScroll" />
-//         <Navbar.Collapse id="navbarScroll">
-//           <Nav
-//             className="me-auto my-2 my-lg-0"
-//             id="nav"
-//             navbarScroll
-//           >
-//             <Nav.Link href="../public/index.html">Home</Nav.Link>
-//             <Nav.Link href="../public/promociones.html">Promociones</Nav.Link>
-//             <Nav.Link href="../public/contacto.html">Contacto</Nav.Link>
-//             <Nav.Link href="../public/miperfil.html">Mi Perfil</Nav.Link>
-//           </Nav>
-//           <Form className="d-flex">
-//             <Form.Control
-//               type="search"
-//               placeholder="Buscar"
-//               className="me-2"
-//               aria-label="Search"
-//               id="busqueda"
-//             />
-//             <Button variant="outline-success" type="submit" id="buscarBtn">
-//               Buscar
-//             </Button>
-//           </Form>
-//           <CartWidget />
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// }

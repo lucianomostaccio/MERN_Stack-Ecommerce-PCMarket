@@ -5,7 +5,7 @@ import { toCapital } from "../helpers/toCapital";
 
 const ItemDetail = ({ item }) => {
   const { carrito, agregarAlCarrito } = useContext(CartContext);
-  console.log(carrito);
+  console.log("current cart:", carrito);
 
   const [cantidad, setCantidad] = useState(1);
 
