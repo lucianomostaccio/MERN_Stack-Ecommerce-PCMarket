@@ -12,7 +12,7 @@ const NavBar = () => {
       try {
         const productosRef = collection(db, "productos");
         const snapshot = await getDocs(productosRef);
-        const uniqueCategories = new Set(); // Usamos un Set para asegurarnos de que las marcas sean únicas
+        const uniqueCategories = new Set(); // Set to make sure "marcas" are unique
 
         snapshot.forEach((doc) => {
           const data = doc.data();

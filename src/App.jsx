@@ -10,7 +10,6 @@ import "../src/App.css";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
-// import SearchContainer from "./components/SearchContainer"
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
 
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
-            {/* <Route path="/search" element={< SearchContainer />} /> */}
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/category/:marca" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
