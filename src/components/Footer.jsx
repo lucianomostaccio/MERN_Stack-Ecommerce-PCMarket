@@ -25,7 +25,7 @@ const Footer = () => {
         </footer>
         <footer className="bottom">
           <div className="legal">
-            <span span="true"> © {currentYear} Derechos Reservados </span>
+            <span span="true"> © {currentYear} LUCIANO DAMIAN MOSTACCIO </span>
             <p> Términos y condiciones </p>
             <p> Política de privacidad </p>
           </div>
