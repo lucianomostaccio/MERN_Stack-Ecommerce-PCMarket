@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 function CartWidget() {
-  const { cantidadEnCarrito } = useContext(CartContext);
+  const { cartQuantity } = useContext(CartContext);
 
   return (
     <li className="carritoNav">
@@ -13,7 +13,7 @@ function CartWidget() {
         CARRITO
         <FontAwesomeIcon icon={faShoppingCart} />
         <span span="true" className="fa-solid" id="cantidadCarrito">
-          {cantidadEnCarrito()}
+          {cartQuantity()}
         </span>
       </Link>
     </li>

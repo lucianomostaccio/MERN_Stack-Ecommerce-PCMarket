@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  // Obtener el año actual
-  const anioActual = new Date().getFullYear();
+  // getCurrentYear
+  const currentYear = new Date().getFullYear();
 
   return (
     <div>
@@ -25,7 +25,7 @@ const Footer = () => {
         </footer>
         <footer className="bottom">
           <div className="legal">
-            <span span="true"> © {anioActual} Derechos Reservados </span>
+            <span span="true"> © {currentYear} Derechos Reservados </span>
             <p> Términos y condiciones </p>
             <p> Política de privacidad </p>
           </div>

@@ -5,30 +5,30 @@ import { addDoc, collection } from "firebase/firestore";
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-const Contacto = () => {
+const Contact = () => {
 
 
-  const [consultaId, setConsultaId] = useState("");
+  const [contactId, setContactId] = useState("");
   const { register, handleSubmit } = useForm();
 
-  const enviar = (data) => {
-    const consulta = {
+  const send = (data) => {
+    const contact = {
       form: data,
     };
 
-    const consultasRef = collection(db, "consultas");
+    const contactsRef = collection(db, "consultas");
 
-    addDoc(consultasRef, consulta).then((doc) => {
-      setConsultaId(doc.id);
+    addDoc(contactsRef, contact).then((doc) => {
+      setContactId(doc.id);
       toast.success('Formulario enviado');
     });
   };
 
-  if (consultaId) {
+  if (contactId) {
     return (
       <div className="container compra-consultaDiv" id="consultaDiv">
         <h1 className="main-title"> ¡Nos contactaremos a la brevedad!</h1>
-        <p> Tu número de consulta es: {consultaId}</p>
+        <p> Tu número de consulta es: {contactId}</p>
       </div>
     );
   }
@@ -39,7 +39,7 @@ const Contacto = () => {
         <div className="content">
           <div className="form">
             <form
-              onSubmit={handleSubmit(enviar)}
+              onSubmit={handleSubmit(send)}
               name="contacto"
               method="post"
               action="#"
@@ -141,4 +141,4 @@ const Contacto = () => {
   );
 };
 
-export default Contacto;
+export default Contact;

@@ -1,14 +1,14 @@
-const ItemCount = ( {cantidad, handleRestar, handleSumar, handleAgregar} ) => {
+const ItemCount = ( {cantidad, handleSubtract, handleSum, handleAdd} ) => {
 
   return (
     <div>
 
         <div className="item-count">
-            <button onClick={handleRestar}>-</button>
+            <button onClick={handleSubtract}>-</button>
             <p>{cantidad}</p>
-            <button onClick={handleSumar}>+</button>
+            <button onClick={handleSum}>+</button>
         </div>
-        <button className="agregar-al-carrito" onClick={handleAgregar}>Agregar al carrito</button>
+        <button className="agregar-al-carrito" onClick={handleAdd}>Agregar al carrito</button>
     </div>
   )
 }

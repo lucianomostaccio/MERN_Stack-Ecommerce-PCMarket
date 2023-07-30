@@ -6,16 +6,16 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ItemDetail = ({ item }) => {
-  const { carrito, agregarAlCarrito } = useContext(CartContext);
-  console.log("current cart:", carrito);
+  const { cart, addInCart } = useContext(CartContext);
+  console.log("current cart:", cart);
 
   const [cantidad, setCantidad] = useState(1);
 
-  const handleRestar = () => {
+  const handleSubtract = () => {
     cantidad > 1 && setCantidad(cantidad - 1);
   };
 
-  const handleSumar = () => {
+  const handleSum = () => {
     cantidad < item.stock && setCantidad(cantidad + 1);
   };
 
@@ -30,13 +30,13 @@ const ItemDetail = ({ item }) => {
           <p className="precio">${item.precio.toLocaleString("es-AR")}</p>
           <ItemCount
             cantidad={cantidad}
-            handleSumar={handleSumar}
-            handleRestar={handleRestar}
-            handleAgregar={() => {
+            handleSum={handleSum}
+            handleSubtract={handleSubtract}
+            handleAdd={() => {
               toast.success("Producto agregado al carrito", {
                 position: toast.POSITION.TOP_LEFT,
               });
-              agregarAlCarrito(item, cantidad);
+              addInCart(item, cantidad);
             }}
           />
         </div>

@@ -8,9 +8,9 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Checkout = () => {
-  const [pedidoId, setPedidoId] = useState("");
+  const [orderId, setOrderId] = useState("");
 
-  const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
+  const { cart, totalPrice, emptyCart } = useContext(CartContext);
 
   const {
     register,
@@ -19,29 +19,29 @@ const Checkout = () => {
     formState: { errors },
   } = useForm();
 
-  const comprar = (data) => {
+  const buy = (data) => {
     if (data.email === data.confirmarEmail) {
-      const pedido = {
+      const order = {
         cliente: data,
-        productos: carrito,
-        total: precioTotal(),
+        productos: cart,
+        total: totalPrice(),
       };
 
-      const pedidosRef = collection(db, "pedidos");
+      const ordersRef = collection(db, "pedidos");
 
-      addDoc(pedidosRef, pedido).then((doc) => {
-        setPedidoId(doc.id);
-        vaciarCarrito();
+      addDoc(ordersRef, order).then((doc) => {
+        setOrderId(doc.id);
+        emptyCart();
         toast.success("¡Compra realizada con éxito!");
       });
     }
   };
 
-  if (pedidoId) {
+  if (orderId) {
     return (
       <div className="container compra-consultaDiv">
         <h1 className="main-title"> Muchas gracias por tu compra</h1>
-        <p> Tu número de pedido es: {pedidoId}</p>
+        <p> Tu número de pedido es: {orderId}</p>
       </div>
     );
   }
@@ -54,7 +54,7 @@ const Checkout = () => {
             <div className="cartDetail">
               <div className="container" id="carritoDiv">
                 <h1 className="main-title">Carrito a comprar:</h1>
-                {carrito.map((prod) => (
+                {cart.map((prod) => (
                   <div key={prod.id} id="divItemCart">
                     <br />
                     <img src={prod.imagen} alt={prod.titulo} id="fotoCarrito" />
@@ -68,7 +68,7 @@ const Checkout = () => {
                 <div id="bottomCartDiv">
                   <div id="precioDiv">
                     <h2>
-                      Precio total: ${precioTotal().toLocaleString("es-AR")}
+                      Precio total: ${totalPrice().toLocaleString("es-AR")}
                     </h2>{" "}
                   </div>
                   <br />
@@ -78,7 +78,7 @@ const Checkout = () => {
             <div className="form">
               <h1 className="main-title">Complete su información:</h1>
               <form
-                onSubmit={handleSubmit(comprar)}
+                onSubmit={handleSubmit(buy)}
                 name="compra"
                 method="post"
                 action="#"
