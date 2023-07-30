@@ -8,15 +8,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./components/Contact";
 import "../src/App.css";
 import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div id="mainDiv">
       <CartProvider>
         <BrowserRouter>
-          <NavBar />
+          <Navbar />
 
           <Routes>
             <Route path="/" element={<ItemListContainer />} />

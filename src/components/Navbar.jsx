@@ -4,7 +4,7 @@ import { collection, getDocs} from "firebase/firestore";
 import { db } from "../firebase/config";
 import { useEffect, useState } from "react";
 
-const NavBar = () => {
+const Navbar = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -65,4 +65,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
