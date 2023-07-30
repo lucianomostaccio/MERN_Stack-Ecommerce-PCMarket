@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import ItemCount from "./ItemCount";
 import { CartContext } from "../context/CartContext";
 import { toCapital } from "../helpers/toCapital";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ItemDetail = ({ item }) => {
   const { carrito, agregarAlCarrito } = useContext(CartContext);
@@ -25,12 +27,15 @@ const ItemDetail = ({ item }) => {
           <h3 className="titulo">{item.titulo}</h3>
           <p className="descripcion">{item.descripcion}</p>
           <p className="marca">Marca: {toCapital(item.marca)}</p>
-          <p className="precio">${item.precio.toLocaleString('es-AR')}</p>
+          <p className="precio">${item.precio.toLocaleString("es-AR")}</p>
           <ItemCount
             cantidad={cantidad}
             handleSumar={handleSumar}
             handleRestar={handleRestar}
             handleAgregar={() => {
+              toast.success("Producto agregado al carrito", {
+                position: toast.POSITION.TOP_LEFT,
+              });
               agregarAlCarrito(item, cantidad);
             }}
           />

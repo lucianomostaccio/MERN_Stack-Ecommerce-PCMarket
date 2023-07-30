@@ -78,12 +78,83 @@
 .NavLink {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.NavCategories {
+#categoryToggler {
+  color: white;
+  font-family: sans-serif;
+}
+
+nav.primary-navigation ul li {
   list-style: none;
-  display: flex;
-  gap: 1rem;
+  margin: 0 auto;
+  border-left: 2px solid #3ca0e7;
+  display: inline-block;
+  padding: 0 30px;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.categoriesSubMenu {
+  color: black;
+}
+
+nav.primary-navigation li a:hover {
+  color: #3ca0e7;
+}
+
+nav.primary-navigation li:hover {
+  cursor: pointer;
+}
+
+nav.primary-navigation ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding-left: 0;
+  left: 0;
+  display: none;
+  background: white;
+}
+
+nav.primary-navigation ul li:hover > ul,
+nav.primary-navigation ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  max-width: 10rem;
+  text-align: left;
+  padding-top: 20px;
+  box-shadow: 0px 3px 5px -1px #ccc;
+}
+
+nav.primary-navigation ul li ul li {
+  clear: both;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  border-style: none;
+}
+
+nav.primary-navigation ul li ul li a:hover {
+  padding-left: 10px;
+  border-left: 2px solid #3ca0e7;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3ca0e7;
+}
+
+ul li ul li a {
+  transition: all 0.5s ease;
 }
 
 .carritoNav {
@@ -111,7 +182,6 @@
   list-style-type: none;
   display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
 .menu-link {
@@ -173,7 +243,7 @@
 }
 
 #itemDetailDiv {
-  margin-top: 4rem;
+  margin-top: 8rem;
   margin-bottom: 9rem;
 }
 
@@ -458,6 +528,10 @@ footer.bottom .links > p {
 }
 
 /*formulario contacto*/
+#contactForm {
+  margin-top: 5rem;
+}
+
 .formpage {
   justify-content: center !important;
 }
@@ -476,7 +550,6 @@ footer.bottom .links > p {
   border: 1px solid #ccc;
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
-  margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
@@ -489,6 +562,7 @@ footer.bottom .links > p {
 
 .formpage form input[type="text"],
 .formpage form input[type="email"],
+form input[type="phone"],
 #pais {
   width: 100%;
   padding: 6px;
@@ -549,4 +623,13 @@ footer.bottom .links > p {
 .checkout > h1 {
   text-align: center;
   vertical-align: middle;
+}
+
+.compra-consultaDiv {
+  min-height: 55vh;
+}
+
+.errorMessage{
+  margin-top:2px;
+  margin-bottom: 20px;
 }

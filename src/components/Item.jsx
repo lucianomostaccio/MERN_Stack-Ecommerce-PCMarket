@@ -1,7 +1,3 @@
-// Crea los componentes Item.js e ItemList.js para mostrar algunos productos en tu ItemListContainer.js. Los ítems deben provenir de un llamado a una promise que los resuelva en tiempo diferido (setTimeout) de 2 segundos, para emular retrasos de red
-
-// Es un componente destinado a mostrar información breve del producto que el user clickeará luego para acceder a los detalles (los desarrollaremos más adelante)
-
 import { Link } from 'react-router-dom'
 import { toCapital } from '../helpers/toCapital'
 

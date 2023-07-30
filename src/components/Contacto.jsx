@@ -1,31 +1,69 @@
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { db } from "../firebase/config";
+import { addDoc, collection } from "firebase/firestore";
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 const Contacto = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    toast.success('¡Formulario enviado con éxito!');
+
+
+  const [consultaId, setConsultaId] = useState("");
+  const { register, handleSubmit } = useForm();
+
+  const enviar = (data) => {
+    const consulta = {
+      form: data,
+    };
+
+    const consultasRef = collection(db, "consultas");
+
+    addDoc(consultasRef, consulta).then((doc) => {
+      setConsultaId(doc.id);
+      toast.success('Formulario enviado');
+    });
   };
+
+  if (consultaId) {
+    return (
+      <div className="container compra-consultaDiv" id="consultaDiv">
+        <h1 className="main-title"> ¡Nos contactaremos a la brevedad!</h1>
+        <p> Tu número de consulta es: {consultaId}</p>
+      </div>
+    );
+  }
 
   return (
     <div>
-      <main className="formpage">
+      <main className="formpage" id="contactForm">
         <div className="content">
           <div className="form">
             <form
-              onSubmit={handleSubmit}
+              onSubmit={handleSubmit(enviar)}
               name="contacto"
               method="post"
               action="#"
             >
               <label htmlFor="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" required />
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                {...register("nombre")}
+              />
 
               <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                {...register("email")}
+              />
 
               <label htmlFor="pais">País:</label>
-              <select id="pais" name="pais" required>
+              <select id="pais" name="pais" required {...register("pais")}>
                 <option value="">Seleccione un país</option>
                 <option value="Argentina">Argentina</option>
                 <option value="Bolivia">Bolivia</option>
@@ -57,8 +95,12 @@ const Contacto = () => {
                   type="checkbox"
                   name="Motivo"
                   value="Soporte compra realizada"
+                  {...register("motivo: soporte")}
                 />
-                <label className="checkboxes" htmlFor="Soporte_compra_realizada">
+                <label
+                  className="checkboxes"
+                  htmlFor="Soporte_compra_realizada"
+                >
                   Soporte compra realizada
                 </label>
 
@@ -66,6 +108,7 @@ const Contacto = () => {
                   type="checkbox"
                   name="Motivo"
                   value="Consulta producto"
+                  {...register("motivo: consulta producto")}
                 />
                 <label className="checkboxes" htmlFor="Consulta_producto">
                   Consulta producto
@@ -75,11 +118,9 @@ const Contacto = () => {
                   type="checkbox"
                   name="Motivo"
                   value="Otra consulta"
+                  {...register("motivo: otra consulta")}
                 />
-                <label
-                  className="checkboxes"
-                  htmlFor="Otra_consulta"
-                >
+                <label className="checkboxes" htmlFor="Otra_consulta">
                   Otra consulta
                 </label>
               </div>
@@ -89,6 +130,7 @@ const Contacto = () => {
                 name="mensaje"
                 rows="5"
                 required
+                {...register("mensaje")}
               ></textarea>
               <input type="submit" value="Enviar" />
             </form>

@@ -2,10 +2,10 @@ import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
-const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
+const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || []; //if localStorage cart "carrito"  is empty, start an empty array
 
 export const CartProvider = ({ children }) => {
-  const [carrito, setCarrito] = useState(carritoInicial);
+  const [carrito, setCarrito] = useState(carritoInicial); // use cart obtained from localStorage
 
   const agregarAlCarrito = (item, cantidad) => {
     const itemAgregado = { ...item, cantidad };
@@ -36,8 +36,8 @@ export const CartProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-  }, [carrito]);
+    localStorage.setItem("carrito", JSON.stringify(carrito)); //set item in localStorage it everytime it gets mounted
+  }, [carrito]); //also update it everytime the state changes
 
   return (
     <CartContext.Provider
