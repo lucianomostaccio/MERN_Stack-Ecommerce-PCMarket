@@ -1,5 +1,5 @@
 ENG:
-React Ecommerce Project: PC Market
+React Ecommerce Project: PC Market store
 
 Summary, Focus, and Objectives:
 
