@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD6P8N8rCidbhQmMRNqHt6dBCgg5WdC3-s",
+  apiKey: "",
   authDomain: "pc-market-react.firebaseapp.com",
   projectId: "pc-market-react",
   storageBucket: "pc-market-react.appspot.com",
-  messagingSenderId: "616773988326",
-  appId: "1:616773988326:web:ff40465b03a17920177027"
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
